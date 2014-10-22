@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.numericUpDownGridSize = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioBtnMinimum = new System.Windows.Forms.RadioButton();
             this.radioBtnMaximum = new System.Windows.Forms.RadioButton();
+            this.radioBtnMinimum = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGridSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -59,6 +59,11 @@
             // numericUpDownGridSize
             // 
             this.numericUpDownGridSize.Location = new System.Drawing.Point(1025, 33);
+            this.numericUpDownGridSize.Maximum = new decimal(new int[] {
+            27,
+            0,
+            0,
+            0});
             this.numericUpDownGridSize.Minimum = new decimal(new int[] {
             1,
             0,
@@ -85,17 +90,17 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(3, 3);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(985, 613);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -120,17 +125,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Критерий:";
             // 
-            // radioBtnMinimum
-            // 
-            this.radioBtnMinimum.AutoSize = true;
-            this.radioBtnMinimum.Location = new System.Drawing.Point(6, 21);
-            this.radioBtnMinimum.Name = "radioBtnMinimum";
-            this.radioBtnMinimum.Size = new System.Drawing.Size(42, 17);
-            this.radioBtnMinimum.TabIndex = 0;
-            this.radioBtnMinimum.TabStop = true;
-            this.radioBtnMinimum.Text = "Min";
-            this.radioBtnMinimum.UseVisualStyleBackColor = true;
-            // 
             // radioBtnMaximum
             // 
             this.radioBtnMaximum.AutoSize = true;
@@ -141,6 +135,18 @@
             this.radioBtnMaximum.TabStop = true;
             this.radioBtnMaximum.Text = "Max";
             this.radioBtnMaximum.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnMinimum
+            // 
+            this.radioBtnMinimum.AutoSize = true;
+            this.radioBtnMinimum.Checked = true;
+            this.radioBtnMinimum.Location = new System.Drawing.Point(6, 21);
+            this.radioBtnMinimum.Name = "radioBtnMinimum";
+            this.radioBtnMinimum.Size = new System.Drawing.Size(42, 17);
+            this.radioBtnMinimum.TabIndex = 0;
+            this.radioBtnMinimum.TabStop = true;
+            this.radioBtnMinimum.Text = "Min";
+            this.radioBtnMinimum.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

@@ -61,7 +61,15 @@ namespace MIAPR_6
             distances = RandomGrid((int) numericUpDownGridSize.Value);
             var hierarchical = new HierarchicalGrouping(distances, (int) numericUpDownGridSize.Value);
             hierarchical.FindGroups();
-            hierarchical.Draw(chart1);
+            if (radioBtnMinimum.Checked)
+            {
+                hierarchical.Draw(chart1,0);
+            }
+            else
+            {
+                hierarchical.Draw(chart1,1);
+            }
+          
         }
 
         private void dataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)

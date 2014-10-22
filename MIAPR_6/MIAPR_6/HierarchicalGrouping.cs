@@ -148,7 +148,7 @@ namespace MIAPR_6
             } while (result);
         }
 
-        private void SetUpChart(Chart chart)
+        private void SetUpChart(Chart chart,int i)
         {
             chart.Series.Clear();
             chart.ChartAreas[0].AxisX.ArrowStyle = AxisArrowStyle.Lines;
@@ -162,10 +162,17 @@ namespace MIAPR_6
             chart.ChartAreas[0].AxisY.IsStartedFromZero = true;
             chart.ChartAreas[0].AxisX.Minimum = 0;
             chart.ChartAreas[0].AxisX.Maximum = DX;
-            chart.ChartAreas[0].AxisY.Maximum = groups[0].Y;
+            chart.ChartAreas[0].AxisY.Maximum = groups[0].Y + 0.01;
             chart.ChartAreas[0].AxisY.Minimum = 0;
             chart.ChartAreas[0].AxisY.Title = "R";
-            chart.ChartAreas[0].AxisY.Interval = groups[0].Y/10;
+            if (i==0)
+            {
+                chart.ChartAreas[0].AxisY.Interval = 1;
+            }
+            else
+            {
+                chart.ChartAreas[0].AxisY.Interval = groups[0].Y / 10;
+            }
             chart.ChartAreas[0].AxisY.LineWidth = 2;
         }
 
@@ -214,9 +221,9 @@ namespace MIAPR_6
             }
         }
 
-        public void Draw(Chart chart)
+        public void Draw(Chart chart,int i)
         {
-            SetUpChart(chart);
+            SetUpChart(chart,i);
             foreach (Group subGroup in groups)
             {
                 DrawSubGroups(subGroup, chart);
