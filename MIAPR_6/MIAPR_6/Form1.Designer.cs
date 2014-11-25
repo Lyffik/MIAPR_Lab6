@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.numericUpDownGridSize = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             // 
             this.numericUpDownGridSize.Location = new System.Drawing.Point(1025, 33);
             this.numericUpDownGridSize.Maximum = new decimal(new int[] {
-            27,
+            50,
             0,
             0,
             0});
@@ -90,17 +90,17 @@
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(3, 3);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(985, 613);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -130,10 +130,10 @@
             this.radioBtnMaximum.AutoSize = true;
             this.radioBtnMaximum.Location = new System.Drawing.Point(6, 50);
             this.radioBtnMaximum.Name = "radioBtnMaximum";
-            this.radioBtnMaximum.Size = new System.Drawing.Size(45, 17);
+            this.radioBtnMaximum.Size = new System.Drawing.Size(87, 17);
             this.radioBtnMaximum.TabIndex = 1;
             this.radioBtnMaximum.TabStop = true;
-            this.radioBtnMaximum.Text = "Max";
+            this.radioBtnMaximum.Text = "Max(R=50-Y)";
             this.radioBtnMaximum.UseVisualStyleBackColor = true;
             // 
             // radioBtnMinimum

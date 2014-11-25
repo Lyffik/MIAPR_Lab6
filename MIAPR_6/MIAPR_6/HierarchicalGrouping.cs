@@ -21,14 +21,14 @@ namespace MIAPR_6
             Color.Aqua,
             Color.DarkOrchid,
             Color.RoyalBlue,
-            Color.Bisque,
+            Color.DarkBlue,
             Color.Beige,
             Color.Salmon,
             Color.Sienna,
             Color.PowderBlue,
             Color.Plum,
             Color.LightSalmon,
-            Color.Khaki,
+            Color.DarkOrchid,
             Color.Olive,
             Color.YellowGreen,
             Color.Violet,
@@ -67,7 +67,14 @@ namespace MIAPR_6
         private char NextChar()
         {
             const string alphabet = "ABCDEFGHIKLMNOPQRSTVXYZ";
-            numberOfChar++;
+            if (numberOfChar == alphabet.Length - 1)
+            {
+                numberOfChar = 0;
+            }
+            else
+            {
+                numberOfChar++;
+            }
             return alphabet[numberOfChar - 1];
         }
 
@@ -119,6 +126,7 @@ namespace MIAPR_6
 
         public void FindGroups()
         {
+            nextColor = 0;
             bool result = false;
             do
             {
@@ -148,7 +156,7 @@ namespace MIAPR_6
             } while (result);
         }
 
-        private void SetUpChart(Chart chart,int i)
+        private void SetUpChart(Chart chart)
         {
             chart.Series.Clear();
             chart.ChartAreas[0].AxisX.ArrowStyle = AxisArrowStyle.Lines;
@@ -165,14 +173,7 @@ namespace MIAPR_6
             chart.ChartAreas[0].AxisY.Maximum = groups[0].Y + 0.01;
             chart.ChartAreas[0].AxisY.Minimum = 0;
             chart.ChartAreas[0].AxisY.Title = "R";
-            if (i==0)
-            {
-                chart.ChartAreas[0].AxisY.Interval = 1;
-            }
-            else
-            {
-                chart.ChartAreas[0].AxisY.Interval = groups[0].Y / 10;
-            }
+            chart.ChartAreas[0].AxisY.Interval = 1;
             chart.ChartAreas[0].AxisY.LineWidth = 2;
         }
 
@@ -192,9 +193,19 @@ namespace MIAPR_6
                 pointsSeries.Name = group.Name;
                 pointsSeries.MarkerSize = 30;
                 pointsSeries.MarkerColor = colors[nextColor];
-                nextColor++;
+                if (nextColor == 28)
+                {
+                    nextColor = 0;
+                }
+                else
+                {
+                    nextColor++;
+                }
                 pointsSeries.Points.AddXY(group.X, group.Y);
-                chart.Series.Add(pointsSeries);
+                if (chart.Series.IndexOf(pointsSeries) == -1)
+                {
+                    chart.Series.Add(pointsSeries);
+                }
                 foreach (Group subGroup in group.SubGroups)
                 {
                     var lineSeries = new Series {ChartType = SeriesChartType.Line};
@@ -221,9 +232,9 @@ namespace MIAPR_6
             }
         }
 
-        public void Draw(Chart chart,int i)
+        public void Draw(Chart chart)
         {
-            SetUpChart(chart,i);
+            SetUpChart(chart);
             foreach (Group subGroup in groups)
             {
                 DrawSubGroups(subGroup, chart);
@@ -232,7 +243,7 @@ namespace MIAPR_6
 
         private struct DPoint
         {
-            public double X;
+            public readonly double X;
             public double Y;
 
             public DPoint(double x, double y)

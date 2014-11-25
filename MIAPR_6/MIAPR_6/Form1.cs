@@ -27,7 +27,7 @@ namespace MIAPR_6
             {
                 for (int j = 0; j < i; j++)
                 {
-                    result[i, j] = rnd.Next(30) + 1;
+                    result[i, j] = rnd.Next(40) + 1;
                     result[j, i] = result[i, j];
                 }
             }
@@ -44,7 +44,7 @@ namespace MIAPR_6
                 {
                     for (int j = 0; j < i; j++)
                     {
-                        result[i, j] = 1/result[i, j];
+                        result[i, j] = 50 - result[i, j];
                         result[j, i] = result[i, j];
                     }
                 }
@@ -63,13 +63,12 @@ namespace MIAPR_6
             hierarchical.FindGroups();
             if (radioBtnMinimum.Checked)
             {
-                hierarchical.Draw(chart1,0);
+                hierarchical.Draw(chart1);
             }
             else
             {
-                hierarchical.Draw(chart1,1);
+                hierarchical.Draw(chart1);
             }
-          
         }
 
         private void dataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
