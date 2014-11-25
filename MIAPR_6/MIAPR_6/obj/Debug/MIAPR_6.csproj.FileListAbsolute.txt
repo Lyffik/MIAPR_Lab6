@@ -10,3 +10,9 @@ D:\Учеба\3 курс\1 сем\МиАПР\Лабы\6\MIAPR_6\MIAPR_6\obj\Debu
 D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.exe.config
 D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.exe
 D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.pdb
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.exe
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.pdb
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.csprojResolveAssemblyReference.cache
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.Form1.resources
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.Properties.Resources.resources
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.csproj.GenerateResource.Cache
